@@ -9,7 +9,7 @@ const sexTypes = ['masc', 'fem', 'other'] as const;
 const prisma = new PrismaClient();
 
 async function seed() {
-  /*   await prisma.user.deleteMany();
+  await prisma.user.deleteMany();
     await prisma.delegation.deleteMany();
   
     function generateDate() {
@@ -66,7 +66,7 @@ async function seed() {
           create: await createUser("Teste", "teste@gmail.com", "cus_RsMKAYMlcbREkU"),
         }
       }
-    }) */
+    }) 
   await prisma.admin.deleteMany().catch((error) => console.log("No admin found!"))
 
   await prisma.admin.create({
